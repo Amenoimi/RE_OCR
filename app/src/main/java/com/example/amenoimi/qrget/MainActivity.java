@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         String [] permission_array = new String[0];
 
         // Camera permission
@@ -100,6 +99,8 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         mSurfaceHolder = mSurfaceView.getHolder();
         mSurfaceHolder.setKeepScreenOn(true);
 
+        UI ui = new UI(this);
+//        ui.b1.setText("呵呵");
 
 
     }
@@ -136,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
     /**
      * 初始化
      */
-    public void initVIew(View e) {
+    public void initVIew(View v) {
         // 初始化Camera2
         initCamera2();
     }
